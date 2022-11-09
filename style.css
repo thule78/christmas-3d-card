@@ -14,6 +14,53 @@
     background-color: #F5624d;
 }
 
+/* adding falling snow */
+.stars {
+    content:"";
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    box-shadow: -550px -200px rgba(255,255,255, 0.8), 
+                -200px -350px rgba(255,255,255, 1), 
+                -300px -150px rgba(255, 255, 255, 0.8),
+                -700px -400px rgba(255,255,255, 1),
+                -600px -450px rgba(255,255,255, 0.8),
+                -400px -260px rgba(255, 255, 255, 0.9), 
+                -200px -310px rgba(255,255,255, 1), 
+                -300px -270px rgba(255,255,255, 1),
+                -580px -400px rgba(255, 255,255, 0.6),
+                -600px -550px rgba(255,255,255, 1),
+                550px 200px rgba(255,255,255, 1), 
+                200px 350px rgba(255,255,255, 1), 
+                300px 150px rgba(255,255,255, 0.6),
+                700px 400px rgba(255,255,255, 0.9),
+                600px 450px rgba(255,255,255, 0.7),
+                400px 260px rgba(255,255,255, 0.6), 
+                200px 310px rgba(255,255,255, 1), 
+                300px 270px rgba(255,255,255, 1),
+                580px 400px rgba(255,255,255, 0.9),
+                600px 550px rgba(255,255,255, 0.7)
+                
+                
+                ;
+    animation: starsFall 5s linear infinite;
+    opacity: 0;
+}
+
+.fall {
+    opacity: 1;
+}
+
+@keyframes starsFall {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(800px);
+    }
+}
+
 .card-wrapper {
     width: 700px;
     height: 750px;
