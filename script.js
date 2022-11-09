@@ -3,6 +3,7 @@ const card = document.querySelector(".card");
 const title = document.querySelector(".title");
 const santa = document.querySelector(".santa");
 const tree = document.querySelector(".tree");
+const stars = document.querySelector(".stars");
 
 cardWapper.addEventListener("mousemove", (rotate) => {
     let x = (innerWidth / 2 - rotate.pageX) / 15;
@@ -13,9 +14,11 @@ cardWapper.addEventListener("mousemove", (rotate) => {
 
 cardWapper.addEventListener("mouseover", () => {
    card.classList.add("change");
+   stars.classList.add("fall");
 });
 
 cardWapper.addEventListener("mouseout", () =>{
     card.classList.remove("change");
+    stars.classList.remove("fall");
     card.style.transform = "rotateY(0deg) rotateX(0deg)";
 })
