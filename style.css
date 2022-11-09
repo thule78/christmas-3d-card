@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+}
+
+.container {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F5624d;
+}
+
+.card-wrapper {
+    width: 700px;
+    height: 750px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 1200px;
+}
+
+.card {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 450px;
+    height: 600px;
+    transition: all 0.6s ease;
+    transform-style: preserve-3d;
+}
+
+.card .card-bg {
+    position: absolute;
+}
+
+.card .card-bg img {
+    z-index: 1;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.card .title {
+    z-index: 2;
+    position: absolute;
+    top: 50px;
+    text-align: center;
+    line-height: 40px;
+    transition: all 0.6s ease-out;   
+}
+
+
+.change .title {
+    transform: translate3d(0, 0, 160px);
+}
+
+.card .title h2 {
+    font-family: "Ezcar", serif;
+    font-size: 25px;
+    text-transform: uppercase;
+    color: #6e9107;
+}
+
+.card .title h1 {
+    font-family: "Bershire Swash", cursive;
+    font-size: 60px;
+    letter-spacing: 2px;
+    color: #f24141;
+}
+
+.card .title .h3 {
+    font-family: "Ezcar", sans-serif;
+    font-size: 20px;
+    text-transform: uppercase;
+    margin-top: 10px;
+    color: #6e9107;
+}
+
+.card .images {
+    z-index: 3;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+.card .images .santa {
+    z-index: 100;
+    width: 350px;
+    position: absolute;
+    transition: all 0.6s ease-out;
+    top: -200px;
+    left: -160px;
+   
+}
+
+.change .images .santa {
+    transform: translate3d(0, 0, 250px);
+}
+
+.card .images .tree {
+    z-index: 3;
+    width: 250px;
+    position: absolute;
+    top: -40px;
+    left: -120px;
+    transition: all 0.6s ease-out;
+ 
+}
+
+.change .images .tree {
+    transform: translate3d(0, 0, 180px);
+}
